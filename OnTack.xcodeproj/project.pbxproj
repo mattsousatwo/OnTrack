@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		6091EDA8266C972500AB6CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6091EDA6266C972500AB6CC7 /* LaunchScreen.storyboard */; };
 		6091EDB3266C972500AB6CC7 /* OnTackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6091EDB2266C972500AB6CC7 /* OnTackTests.swift */; };
 		6091EDBE266C972500AB6CC7 /* OnTackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6091EDBD266C972500AB6CC7 /* OnTackUITests.swift */; };
+		6091EDD8266C99BE00AB6CC7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6091EDD7266C99BE00AB6CC7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6091EDD8266C99BE00AB6CC7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +103,10 @@
 		6091ED97266C972400AB6CC7 /* OnTack */ = {
 			isa = PBXGroup;
 			children = (
-				6091EDCE266C98C000AB6CC7 /* Support Files */,
+				6091EDD2266C994C00AB6CC7 /* Coredata */,
 				6091ED9C266C972400AB6CC7 /* ContentView.swift */,
 				6091EDA9266C972500AB6CC7 /* Info.plist */,
-				6091ED9E266C972400AB6CC7 /* OnTack.xcdatamodeld */,
+				6091EDCE266C98C000AB6CC7 /* Support Files */,
 				6091EDA3266C972500AB6CC7 /* Preview Content */,
 			);
 			path = OnTack;
@@ -147,6 +149,14 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
+		6091EDD2266C994C00AB6CC7 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				6091ED9E266C972400AB6CC7 /* OnTack.xcdatamodeld */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +173,9 @@
 			dependencies = (
 			);
 			name = OnTack;
+			packageProductDependencies = (
+				6091EDD7266C99BE00AB6CC7 /* Alamofire */,
+			);
 			productName = OnTack;
 			productReference = 6091ED95266C972400AB6CC7 /* OnTack.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 6091ED8C266C972400AB6CC7;
+			packageReferences = (
+				6091EDD6266C99BE00AB6CC7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 6091ED96266C972400AB6CC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -609,6 +625,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6091EDD6266C99BE00AB6CC7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6091EDD7266C99BE00AB6CC7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6091EDD6266C99BE00AB6CC7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6091ED9E266C972400AB6CC7 /* OnTack.xcdatamodeld */ = {

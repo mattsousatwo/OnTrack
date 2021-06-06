@@ -101,11 +101,8 @@
 		6091ED97266C972400AB6CC7 /* OnTack */ = {
 			isa = PBXGroup;
 			children = (
-				6091ED98266C972400AB6CC7 /* AppDelegate.swift */,
-				6091ED9A266C972400AB6CC7 /* SceneDelegate.swift */,
+				6091EDCE266C98C000AB6CC7 /* Support Files */,
 				6091ED9C266C972400AB6CC7 /* ContentView.swift */,
-				6091EDA1266C972500AB6CC7 /* Assets.xcassets */,
-				6091EDA6266C972500AB6CC7 /* LaunchScreen.storyboard */,
 				6091EDA9266C972500AB6CC7 /* Info.plist */,
 				6091ED9E266C972400AB6CC7 /* OnTack.xcdatamodeld */,
 				6091EDA3266C972500AB6CC7 /* Preview Content */,
@@ -137,6 +134,17 @@
 				6091EDBF266C972500AB6CC7 /* Info.plist */,
 			);
 			path = OnTackUITests;
+			sourceTree = "<group>";
+		};
+		6091EDCE266C98C000AB6CC7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6091ED9A266C972400AB6CC7 /* SceneDelegate.swift */,
+				6091ED98266C972400AB6CC7 /* AppDelegate.swift */,
+				6091EDA6266C972500AB6CC7 /* LaunchScreen.storyboard */,
+				6091EDA1266C972500AB6CC7 /* Assets.xcassets */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

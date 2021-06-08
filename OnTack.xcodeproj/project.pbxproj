@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60513146266EFD3000661DFB /* FormulaOneStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60513145266EFD3000661DFB /* FormulaOneStore.swift */; };
+		6051314C266EFE1200661DFB /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6051314B266EFE1200661DFB /* Drivers.swift */; };
 		6091ED99266C972400AB6CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6091ED98266C972400AB6CC7 /* AppDelegate.swift */; };
 		6091ED9B266C972400AB6CC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6091ED9A266C972400AB6CC7 /* SceneDelegate.swift */; };
 		6091ED9D266C972400AB6CC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6091ED9C266C972400AB6CC7 /* ContentView.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60513145266EFD3000661DFB /* FormulaOneStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneStore.swift; sourceTree = "<group>"; };
+		6051314B266EFE1200661DFB /* Drivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
 		6091ED95266C972400AB6CC7 /* OnTack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6091ED98266C972400AB6CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6091ED9A266C972400AB6CC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6051314A266EFD5700661DFB /* CodingKeys */ = {
+			isa = PBXGroup;
+			children = (
+				6051314B266EFE1200661DFB /* Drivers.swift */,
+			);
+			path = CodingKeys;
+			sourceTree = "<group>";
+		};
 		6091ED8C266C972400AB6CC7 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +115,10 @@
 		6091ED97266C972400AB6CC7 /* OnTack */ = {
 			isa = PBXGroup;
 			children = (
-				6091EDD2266C994C00AB6CC7 /* Coredata */,
-				6091ED9C266C972400AB6CC7 /* ContentView.swift */,
+				6091EDDD266C9BC000AB6CC7 /* Race DB */,
 				6091EDA9266C972500AB6CC7 /* Info.plist */,
+				6091EDD2266C994C00AB6CC7 /* Coredata */,
+				6091EDDC266C99FB00AB6CC7 /* Views */,
 				6091EDCE266C98C000AB6CC7 /* Support Files */,
 				6091EDA3266C972500AB6CC7 /* Preview Content */,
 			);
@@ -155,6 +168,23 @@
 				6091ED9E266C972400AB6CC7 /* OnTack.xcdatamodeld */,
 			);
 			path = Coredata;
+			sourceTree = "<group>";
+		};
+		6091EDDC266C99FB00AB6CC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6091ED9C266C972400AB6CC7 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6091EDDD266C9BC000AB6CC7 /* Race DB */ = {
+			isa = PBXGroup;
+			children = (
+				6051314A266EFD5700661DFB /* CodingKeys */,
+				60513145266EFD3000661DFB /* FormulaOneStore.swift */,
+			);
+			path = "Race DB";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +325,8 @@
 			files = (
 				6091ED99266C972400AB6CC7 /* AppDelegate.swift in Sources */,
 				6091ED9B266C972400AB6CC7 /* SceneDelegate.swift in Sources */,
+				60513146266EFD3000661DFB /* FormulaOneStore.swift in Sources */,
+				6051314C266EFE1200661DFB /* Drivers.swift in Sources */,
 				6091ED9D266C972400AB6CC7 /* ContentView.swift in Sources */,
 				6091EDA0266C972400AB6CC7 /* OnTack.xcdatamodeld in Sources */,
 			);

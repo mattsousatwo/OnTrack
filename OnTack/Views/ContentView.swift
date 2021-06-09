@@ -22,16 +22,9 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color.red
+            Color.black
                 .ignoresSafeArea()
-//            Text("Hello, world!")
-//                .padding()
-            
-                DriverList()
-                
-//                .onAppear {
-//                    getDrivers()
-//                }
+            StandingsScrollView()
         }
     } 
 }
@@ -39,23 +32,31 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
 //        ContentView()
-        DriverCard().previewLayout(.sizeThatFits)
+        DriverCard(name: "Charles Leclerc", position: "5", points: "140").previewLayout(.sizeThatFits)
     }
 }
 
 
-struct DriverList: View {
+struct StandingsScrollView: View {
     @ObservedObject var f1Store = FormulaOneStore()
     var body: some View {
-        VStack {
-            ForEach(0..<f1Store.drivers.count, id: \.self) { index in
-                Text("\(f1Store.drivers[index].givenName) \(f1Store.drivers[index].familyName)")
-                    .padding(.vertical, 5)
-                
+        
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                ForEach(0..<f1Store.driverStandings.count, id: \.self) { index in
+                    
+                    let element = f1Store.driverStandings[index]
+                    
+                    DriverCard(name: element.fullName(),
+                               position: element.position,
+                               points: element.points)
+                        .padding(.vertical, 5)
+                    
+                }
             }
         }
         .onAppear(perform: {
-            f1Store.getAllDrivers()
+            f1Store.getDriverStandings()
         })
         
     }
@@ -63,14 +64,17 @@ struct DriverList: View {
 
 struct DriverCard: View {
     
-    let width = UIScreen.main.bounds.width
+    let width = UIScreen.main.bounds.width - 10
     let height = UIScreen.main.bounds.height
     // MARK: SET TO CONSTUCTOR COLOR
-    let color = UIColor.blue
+    let color = Color.blue
+    let name: String
+    let position: String
+    let points: String
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
-            .foregroundColor(.blue)
+            .foregroundColor(color)
             .frame(width: width,
                    height: height / 4,
                    alignment: .center)
@@ -82,7 +86,7 @@ struct DriverCard: View {
                         .frame(width: width / 8,
                                height: height / 15,
                                alignment: .center)
-                    Text("Max Verstappen")
+                    Text(name)
                         .font(.system(.title3, design: .rounded))
                         .bold()
                     
@@ -103,10 +107,10 @@ struct DriverCard: View {
             // MARK: POINTS / PLACEMENT
             .overlay(
                 VStack {
-                    Text("Place")
+                    Text(position)
                         .font(.system(.title2, design: .rounded))
                         .bold()
-                    Text("Points")
+                    Text(points)
                         .font(.system(.title2, design: .rounded))
                         .italic()
                         .bold()

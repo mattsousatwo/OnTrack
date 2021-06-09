@@ -28,6 +28,7 @@ class FormulaOneStore: ObservableObject {
                 print(error)
             }
             print("Drivers Count: \(self.drivers.count)")
+            
         }
         
     }

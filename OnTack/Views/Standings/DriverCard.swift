@@ -1,66 +1,11 @@
 //
-//  ContentView.swift
+//  DriverCard.swift
 //  OnTack
 //
-//  Created by Matthew Sousa on 6/6/21.
+//  Created by Matthew Sousa on 6/10/21.
 //
 
 import SwiftUI
-import Combine
-
-struct ContentView: View {
-    
-    @ObservedObject var f1Store = FormulaOneStore()
-    
-    func getDrivers() {
-        let drivers = f1Store.extractDrivers()
-        print("Drivers Count: \(drivers.count)")
-        for driver in f1Store.drivers {
-            print("Driver: \(driver.givenName) \(driver.familyName)")
-        }
-    }
-    
-    var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            StandingsScrollView()
-        }
-    } 
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-//        ContentView()
-        DriverCard(name: "Charles Leclerc", position: "5", points: "140").previewLayout(.sizeThatFits)
-    }
-}
-
-
-struct StandingsScrollView: View {
-    @ObservedObject var f1Store = FormulaOneStore()
-    var body: some View {
-        
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack {
-                ForEach(0..<f1Store.driverStandings.count, id: \.self) { index in
-                    
-                    let element = f1Store.driverStandings[index]
-                    
-                    DriverCard(name: element.fullName(),
-                               position: element.position,
-                               points: element.points)
-                        .padding(.vertical, 5)
-                    
-                }
-            }
-        }
-        .onAppear(perform: {
-            f1Store.getDriverStandings()
-        })
-        
-    }
-}
 
 struct DriverCard: View {
     
@@ -106,11 +51,11 @@ struct DriverCard: View {
             
             // MARK: POINTS / PLACEMENT
             .overlay(
-                VStack {
+                VStack(alignment: .leading) {
                     Text(position)
                         .font(.system(.title2, design: .rounded))
                         .bold()
-                    Text(points)
+                    Text(points + "pts")
                         .font(.system(.title2, design: .rounded))
                         .italic()
                         .bold()
@@ -124,3 +69,10 @@ struct DriverCard: View {
     }
 }
 
+
+
+struct DriverCard_Previews: PreviewProvider {
+    static var previews: some View {
+        DriverCard(name: "First Last", position: "3rd", points: "12")
+    }
+}

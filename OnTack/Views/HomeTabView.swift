@@ -16,9 +16,9 @@ struct HomeTabView: View {
             
             TabView {
                 
-                StandingsView() 
+                StandingsView()
                     .tabItem {
-                        Image(systemName: "globe")
+                        Image(systemName: "line.horizontal.3")
                         Text("Standings")
                     }.tag(1)
                 

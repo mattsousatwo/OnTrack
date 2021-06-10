@@ -16,6 +16,13 @@ struct HomeTabView: View {
             
             TabView {
                 
+                NewsView()
+                    .tabItem {
+                        Image(systemName: "newspaper")
+                        Text("News")
+                    }.tag(0)
+                
+                
                 StandingsView()
                     .tabItem {
                         Image(systemName: "line.horizontal.3")

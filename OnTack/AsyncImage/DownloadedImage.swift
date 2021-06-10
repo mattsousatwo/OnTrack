@@ -9,9 +9,17 @@ import Foundation
 import SwiftUI
 
 
+// Change URL to be a string?
+// Then unwrap String inside DownloadedImage
+
 // Image that can load from downloaded object
 struct DownloadedImage: View {
-    var url: URL?
+    var address: String?
+    private var url: URL? {
+        guard let address = address else { return nil }
+        guard let url = URL(string: address) else { return nil }
+        return url 
+        }
     var width: CGFloat = 150
     var height: CGFloat = 250
     var alignment: Alignment = .center

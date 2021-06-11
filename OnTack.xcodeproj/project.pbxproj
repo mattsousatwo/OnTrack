@@ -32,6 +32,7 @@
 		6091EDB3266C972500AB6CC7 /* OnTackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6091EDB2266C972500AB6CC7 /* OnTackTests.swift */; };
 		6091EDBE266C972500AB6CC7 /* OnTackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6091EDBD266C972500AB6CC7 /* OnTackUITests.swift */; };
 		6091EDD8266C99BE00AB6CC7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6091EDD7266C99BE00AB6CC7 /* Alamofire */; };
+		60AFF6692673C08A00B9D7F0 /* NewsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AFF6682673C08A00B9D7F0 /* NewsReader.swift */; };
 		60E20C6C26712B5400DF93CC /* StandingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E20C6B26712B5400DF93CC /* StandingsKey.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		6091EDB9266C972500AB6CC7 /* OnTackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6091EDBD266C972500AB6CC7 /* OnTackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTackUITests.swift; sourceTree = "<group>"; };
 		6091EDBF266C972500AB6CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60AFF6682673C08A00B9D7F0 /* NewsReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReader.swift; sourceTree = "<group>"; };
 		60E20C6B26712B5400DF93CC /* StandingsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				6052E9322672928800D858B9 /* NewsView.swift */,
 				6052E9372672929D00D858B9 /* NewsFeedView.swift */,
 				6052E93C267292AC00D858B9 /* NewsArticle.swift */,
+				60AFF6682673C08A00B9D7F0 /* NewsReader.swift */,
 			);
 			path = "News Feed";
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				6052E9082672876F00D858B9 /* HomeTabView.swift in Sources */,
 				60513146266EFD3000661DFB /* FormulaOneStore.swift in Sources */,
 				6052E9032671BB8B00D858B9 /* DownloadedImage.swift in Sources */,
+				60AFF6692673C08A00B9D7F0 /* NewsReader.swift in Sources */,
 				6051314C266EFE1200661DFB /* Drivers.swift in Sources */,
 				6052E9382672929D00D858B9 /* NewsFeedView.swift in Sources */,
 				6052E8FE2671BAF500D858B9 /* AsyncImage.swift in Sources */,

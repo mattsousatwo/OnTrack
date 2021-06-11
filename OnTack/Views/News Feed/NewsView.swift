@@ -26,9 +26,13 @@ struct NewsView: View {
                        alignment: .center)
             
             NewsFeedView(width: 100,
-                         height: 400)
+                         height: (UIScreen.main.bounds.height - 200) - (UIScreen.main.bounds.height / 5) )
                 
-        }.padding()
+        }
+        .frame(width: UIScreen.main.bounds.width,
+               height: UIScreen.main.bounds.height - 200,
+               alignment: .top)
+        .padding()
         
         
     }
